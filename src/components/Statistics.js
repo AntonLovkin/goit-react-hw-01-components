@@ -6,10 +6,10 @@ import PropTypes from 'prop-types'
   <section class="statistics">
   <h2 class="title">{title}</h2>
    <ul class="stat-list">
-    {stats.map(stat => (
-      <li class="item" key={stat.id}>
-      <span class="label">{stat.label}</span>
-      <span class="percentage">{stat.percentage}%</span>
+    {stats.map(({id, label, percentage}) => (
+      <li class="item" key={id}>
+      <span class="label">{label}</span>
+      <span class="percentage">{percentage}%</span>
     </li>
     ))}
         
@@ -17,6 +17,15 @@ import PropTypes from 'prop-types'
 </section>
 </div>)
 
+Statistics.defaultProps = {
+    name: "Upload stats",
+};
+ 
+Statistics.propTypes = {
+  stats: PropTypes.array.isRequired,
+  // percentage: PropTypes.number.isRequired,
+  // label: PropTypes.string.isRequired,
+}
 
 export default Statistics;
 

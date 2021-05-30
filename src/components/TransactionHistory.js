@@ -23,6 +23,17 @@ const TransactionHistory = ({items}) => (
 </table>
 </div>)
 
+TransactionHistory.defaultProps = {
+    
+};
+ 
+TransactionHistory.propTypes = {
+  items: PropTypes.array.isRequired,
+//   type: PropTypes.string.isRequired,
+//   amount: PropTypes.string.isRequired,
+//   currency: PropTypes.number.isRequired, 
+}
+
 export default TransactionHistory;
 
 

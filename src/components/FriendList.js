@@ -11,6 +11,14 @@ const FriendList = ({friends}) => (
                 isOnline={friend.isOnline}
                 id={friend.id} />
     ))}
-    </ul>) 
+    </ul>)
+    
+FriendList.defaultProps = {
+    
+};
+ 
+FriendList.propTypes = {
+  friends: PropTypes.array.isRequired,
+}
 
 export default FriendList      

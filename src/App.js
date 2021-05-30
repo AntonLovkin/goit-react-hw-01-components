@@ -9,9 +9,8 @@ import TransactionHistory from './components/TransactionHistory';
 import transactions from './data/bank-story.json';
 
 const App = () => 
-(<ul>
+(<div>
     {user.map((user) => (
-        <li key={user.id}>
         <Profile
            name={user.name}
            tag={user.tag}
@@ -22,9 +21,7 @@ const App = () =>
                 likes={user.stats.likes}
                 id={user.tag}
             />
-           
-        </li>
-    ))}
+       ))}
         <Statistics
         title="Upload stats"
         stats={statisticalData} />;
@@ -32,18 +29,9 @@ const App = () =>
     <FriendList
         friends={friends} />
     
-    <TransactionHistory items={transactions} />
+    <TransactionHistory
+        items={transactions} />
         
-     </ul>)
-
-
+     </div>)
 
 export default App;
-
-// const Statistics = ({ stats }) => (
-//   <ul>
-//     {stats.map(stat => (
-//       <li key={stat.id}>{stat.label}{stat.percentage}%</li>
-//     ))}
-//   </ul>
-// );

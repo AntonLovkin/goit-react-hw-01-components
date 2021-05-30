@@ -9,4 +9,15 @@ const FriendListItem = ({avatar, name, isOnline, id}) => (
  </li>
 )
 
+FriendListItem.defaultProps = {
+    name: "Friend Name",
+};
+ 
+FriendListItem.propTypes = {
+  name: PropTypes.string,
+  avatar: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
+  id: PropTypes.number.isRequired, 
+}
+
 export default FriendListItem
