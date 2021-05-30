@@ -1,7 +1,8 @@
 import React from 'react';
 import Profile from "./components/Profile";
 import user from './user.json';
-console.log(user);
+import Statistics from './components/Statistics';
+import statisticalData from './statistical-data.json';
 
 const App = () => 
 (<ul>
@@ -12,16 +13,27 @@ const App = () =>
            tag={user.tag}
            location={user.location}
            avatar={user.avatar}
-                stats={user.stats}
+                followers={user.stats.followers}
+                views={user.stats.views}
+                likes={user.stats.likes}
                 id={user.tag}
-        />
+            />
+           
         </li>
     ))}
-</ul>)
+        <Statistics
+        title="Upload stats"
+        stats={statisticalData} />;
+     </ul>)
 
 
-// console.log(profile);
-// console.log(user);
 
 export default App;
 
+// const Statistics = ({ stats }) => (
+//   <ul>
+//     {stats.map(stat => (
+//       <li key={stat.id}>{stat.label}{stat.percentage}%</li>
+//     ))}
+//   </ul>
+// );
