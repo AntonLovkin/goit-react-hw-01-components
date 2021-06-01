@@ -1,5 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import profile from '../styles/Profile.module.css'
+console.log(profile);
 
  const Profile = ({name, avatar, tag, location, followers, views, likes}) => 
  ( <div className="profile">
@@ -9,7 +11,7 @@ import PropTypes from 'prop-types'
       alt="Аватар пользователя"
       class="avatar"
     />
-    <p class="name">{name}</p>
+    <p className={profile.profile}>{name}</p>
     <p class="tag">{tag}</p>
     <p class="location">{location}</p>
   </div>
@@ -29,6 +31,7 @@ import PropTypes from 'prop-types'
     </li>
   </ul>
 </div>)
+
 
 Profile.defaultProps = {
     name: "User Name",
