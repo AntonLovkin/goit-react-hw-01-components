@@ -1,0 +1,31 @@
+table,
+td,
+th {
+  border: 1px solid black;
+  height: 50px;
+}
+
+.container {
+  text-align: center;
+  width: 550px;
+
+  border: 2px solid gray;
+  border-radius: 10px;
+  max-width: 556px;
+  margin: 20px;
+  padding: 20px;
+  margin-top: 0;
+
+  /* padding-left: 0; */
+  display: flex;
+  font-size: 20px;
+  justify-content: space-around;
+  background-color: rgb(211, 224, 200);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 4px 4px 6px -2px rgba(0, 0, 0, 0.39);
+  margin-bottom: 30px;
+}
