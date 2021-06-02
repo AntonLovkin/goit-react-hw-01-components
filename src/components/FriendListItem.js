@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import friendlist from '../styles/FriendList.module.css'
 
 const FriendListItem = ({avatar, name, isOnline, id}) => (
-    <li class="item" key={id}>
+  <li className={isOnline ? friendlist.item : friendlist.disabled} key={id}>
     <span class="status">{isOnline}</span>
    <img class="avatar" src={avatar} alt={name} width="48" />
    <p class="name">{name}</p>
